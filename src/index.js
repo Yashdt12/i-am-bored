@@ -8,6 +8,7 @@ import About from "./About";
 import Error from "./Error";
 import Donate from "./Donate";
 import CatsAndDogsFacts from './CatsAndDogsFacts';
+import Jokes from './Jokes';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: 'cats-and-dogs-facts',
         element: <CatsAndDogsFacts />
+      },
+      {
+        path: 'jokes',
+        element: <Jokes />
       },
       {
         path: '*',

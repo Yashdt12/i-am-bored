@@ -179,6 +179,19 @@ a:active {
   }
 }
 
+/* || JOKES PAGE STYLES */
+
+.Jokes p {
+  font-size: 1.25rem;
+  color: var(--COLOR-CONTRAST);
+}
+
+.Jokes button {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  padding: 0.5em 1em;
+}
+
 /* || FOOTER STYLES */
 
 .Footer {

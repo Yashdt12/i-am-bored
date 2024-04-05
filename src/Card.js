@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ imgSrc, title, description }) => {
+const Card = ({ imgSrc, title, description, route }) => {
 
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('cats-and-dogs-facts');
+    navigate(route);
   }
 
   return (
