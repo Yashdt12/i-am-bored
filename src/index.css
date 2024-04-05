@@ -181,15 +181,41 @@ a:active {
 
 /* || JOKES PAGE STYLES */
 
+.Jokes {
+  display: grid;
+  place-content: center;
+}
+
+.Jokes .container {
+  max-width: 50rem;
+}
+
 .Jokes p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--COLOR-CONTRAST);
 }
 
 .Jokes button {
-  margin-top: 1rem;
   font-size: 1.25rem;
   padding: 0.5em 1em;
+  background-color: var(--COLOR-PRIMARY);
+  color: var(--COLOR-CONTRAST);
+}
+
+.Jokes .container > * {
+  margin-top: 1.5rem;
+}
+
+/* || ABOUT PAGE STYLES */
+
+.About p {
+  font-size: 1.5rem;
+  color: var(--COLOR-CONTRAST);
+}
+
+.About .highlight {
+  font-size: 1.5rem;
+  color: var(--COLOR-ACCENT);
 }
 
 /* || FOOTER STYLES */

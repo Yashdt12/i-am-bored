@@ -34,11 +34,11 @@ const Jokes = () => {
         <p style={{fontSize: '2rem', color: 'indianred'}}>{error}</p> :
         isLoading ?
         <p style={{fontSize: '2rem', color: '#00ADB5'}}>Loading...</p> :
-        <>
+        <div className='container'>
           <p>{joke.setup}</p>
           <p>{joke.punchline}</p>
           <button onClick={fetchJoke}>Another one</button>
-        </>
+        </div>
       }
     </main>
   );
