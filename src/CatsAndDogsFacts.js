@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const CAT_IMAGE_URL = 'http://shibe.online/api/cats';
+const CAT_IMAGE_URL = 'https://shibe.online/api/cats';
 
 const CAT_FACT_URL = 'https://meowfacts.herokuapp.com';
 
