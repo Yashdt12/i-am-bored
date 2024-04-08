@@ -9,6 +9,7 @@ import Error from "./Error";
 import Donate from "./Donate";
 import CatsAndDogsFacts from './CatsAndDogsFacts';
 import Jokes from './Jokes';
+import Trivia from './Trivia';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         element: <Jokes />
       },
       {
+        path: 'trivia',
+        element: <Trivia />
+      },
+      {
         path: '*',
         element: <Error />
       }
@@ -45,7 +50,7 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <RouterProvider router={router} />
-  </React.StrictMode>
+  // </React.StrictMode>
 );

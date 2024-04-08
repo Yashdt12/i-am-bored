@@ -16,6 +16,12 @@ const Home = () => {
         description={'Laugh a little'}
         route={'jokes'}
       />
+      <Card
+        imgSrc={'https://picsum.photos/301'}
+        title={'Trivia Time'}
+        description={'Test your trivia knowledge !'}
+        route={'trivia'}
+      />
     </main>
     );
 };

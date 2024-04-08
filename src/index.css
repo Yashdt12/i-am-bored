@@ -181,9 +181,11 @@ a:active {
 
 /* || JOKES PAGE STYLES */
 
-.Jokes {
-  display: grid;
-  place-content: center;
+@media (min-width: 60em) {
+  .Jokes {
+    display: grid;
+    place-content: center;
+  }
 }
 
 .Jokes .container {
@@ -191,19 +193,53 @@ a:active {
 }
 
 .Jokes p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--COLOR-CONTRAST);
 }
 
 .Jokes button {
   font-size: 1.25rem;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.5em;
   background-color: var(--COLOR-PRIMARY);
   color: var(--COLOR-CONTRAST);
 }
 
 .Jokes .container > * {
   margin-top: 1.5rem;
+}
+
+/* || TRIVIA PAGE STYLES */
+
+.Trivia {
+  color: var(--COLOR-CONTRAST);
+  display: grid;
+  place-content: center;
+  font-size: 1.25rem;
+}
+
+.Trivia .container > * {
+  margin-top: 1rem;
+}
+
+.Trivia .option {
+  margin-top: 0.5rem;
+}
+
+.Trivia label {
+  margin-left: 0.5rem;
+}
+
+.Trivia .button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: centers;
+}
+
+.Trivia button {
+  font-size: 1.25rem;
+  color: var(--COLOR-CONTRAST);
+  background-color: var(--COLOR-PRIMARY);
+  padding: 0.25em 0.5em;
 }
 
 /* || ABOUT PAGE STYLES */
