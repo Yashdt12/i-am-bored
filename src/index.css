@@ -223,6 +223,10 @@ a:active {
   }
 }
 
+.Trivia .container {
+  max-width: 50rem;
+}
+
 .Trivia .container > * {
   margin-top: 1rem;
 }
@@ -246,6 +250,10 @@ a:active {
   color: var(--COLOR-CONTRAST);
   background-color: var(--COLOR-PRIMARY);
   padding: 0.25em 0.5em;
+}
+
+.Trivia .display {
+  padding: 0.5em 1em;
 }
 
 /* || ABOUT PAGE STYLES */
