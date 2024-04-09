@@ -212,9 +212,15 @@ a:active {
 
 .Trivia {
   color: var(--COLOR-CONTRAST);
-  display: grid;
-  place-content: center;
   font-size: 1.25rem;
+  display: grid;
+  justify-content: center;
+}
+
+@media (min-width: 60em) {
+  .Trivia {
+    align-content: center;
+  }
 }
 
 .Trivia .container > * {
