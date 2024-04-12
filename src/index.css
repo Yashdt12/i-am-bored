@@ -231,11 +231,19 @@ a:active {
   margin-top: 1rem;
 }
 
+.Trivia select {
+  margin-left: 0.5rem;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  background-color: var(--COLOR-PRIMARY);
+  color: var(--COLOR-CONTRAST);
+}
+
 .Trivia .option {
   margin-top: 0.5rem;
 }
 
-.Trivia label {
+.options label {
   margin-left: 0.5rem;
 }
 

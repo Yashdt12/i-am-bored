@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const URL = 'https://the-trivia-api.com/v2/questions?limit=1';
+const BASE_URL = 'https://the-trivia-api.com/v2/questions?limit=1';
 
 const Trivia = () => {
 
@@ -9,6 +9,8 @@ const Trivia = () => {
   const [options, setOptions] = useState(null);
 
   const [correctOption, setCorrectOption] = useState(null);
+
+  const [category, setCategory] = useState(localStorage.getItem('trivia-category') || 'all');
 
   const [selectedOption, setSelectedOption] = useState(null);
 
@@ -24,12 +26,14 @@ const Trivia = () => {
 
   useEffect(() => {
     fetchData();
-  }, [URL]);
+    localStorage.setItem('trivia-category', category);
+  }, [category]);
   
   async function fetchData() {
     try {
       setIsLoading(true);
-      let response = await fetch(URL);
+      const fetchURL = category === 'all' ? BASE_URL : `${BASE_URL}&categories=${category}`;
+      let response = await fetch(fetchURL);
       if (!response.ok) throw new Error('Failed to fetch data!');
       let result = await response.json();
       setData(result[0]);
@@ -51,6 +55,10 @@ const Trivia = () => {
       const j = Math.floor(Math.random() * (i + 1));
       [arr[i], arr[j]] = [arr[j], arr[i]];
     }
+  }
+
+  function handleCategoryChange(e) {
+    setCategory(e.target.value);
   }
 
   function handleSelect(optionNumber) {
@@ -99,6 +107,20 @@ const Trivia = () => {
         isLoading ?
         <p style={{fontSize: '2rem', color: '#00ADB5'}}>Loading...</p> :
         <form className='container' onSubmit={(e) => e.preventDefault()}>
+          <label htmlFor="trivia-category">Choose category:</label>
+          <select name="trivia-category" id="trivia-category" value={category} onChange={handleCategoryChange}>
+            <option value="all">All</option>
+            <option value="music">Music</option>
+            <option value="sports_and_leisure">Sports</option>
+            <option value="film_and_tv">Film</option>
+            <option value="arts_and_literature">Art / Literature</option>
+            <option value="history">History</option>
+            <option value="society_and_culture">Society / Culture</option>
+            <option value="science">Science</option>
+            <option value="geography">Geography</option>
+            <option value="food_and_drink">Food & Drinks</option>
+            <option value="general_knowledge">General Knowledge</option>
+          </select>
           <p>{data.question.text}</p>
           <div className="options">
             <div className="option">
